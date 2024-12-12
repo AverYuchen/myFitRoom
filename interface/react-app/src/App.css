@@ -1,8 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
 }
 
 .logo {
@@ -39,4 +60,104 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.header {
+  background-color: #000;
+  width: 100%; /* ä½¿ç”¨ 100% æ›¿ä»£ 100vw */
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.header-logo { 
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.title {
+  color: #FFC0CB;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif, sans-serif;
+  letter-spacing: 1px;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-button {
+  width: 280px;
+  height: 48px;
+  border-radius: 30px;
+  font-size: 17px;
+  font-family: 'Playfair Display', serif, sans-serif;
+  font-weight: 600;
+  border: none;
+  transition: all 0.2s ease;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px;
+  padding: 0 20px !important;
+}
+
+.nav-button:first-child {
+  background-color: #000 !important;
+  color: white !important;
+}
+
+.nav-button:first-child:hover {
+  opacity: 0.9;
+}
+
+.nav-button:last-child {
+  background-color: #FFC0CB !important;
+  color: #000 !important;
+}
+
+.nav-button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:active {
+  transform: translateY(1px); /* å¢žåŠ æŒ‰åŽ‹æ•ˆæžœ */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:last-child:hover {
+  opacity: 0.9;
+}
+
+.button-icon {
+  margin-left: 4px;
+}
+
+.nav-button:first-child .button-icon {
+  color: white !important;
+}
+
+.nav-button:last-child .button-icon {
+  color: black !important;
 }

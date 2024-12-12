@@ -1,34 +1,87 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+import { Button } from 'antd';
+import { Sparkles, Wand2 } from 'lucide-react';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import myLogo from './assets/myFitRoomLogo_250.png'
 
-function App() {
-  const [count, setCount] = useState(0)
+// other pages
+// import GenerateClothes from './pages/GenerateClothes'
+// import VirtualRoom from './pages/VirtualRoom'
 
+function Home() {
+  const navigate = useNavigate()
+  
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div className="app">
+      <header className="header">
+        <div className="logo-section">
+          <img src={myLogo} alt="MyFitRoom Logo" className="header-logo" />
+          <span className="title">MyFitRoom</span>
+        </div>
+      </header>
+      
+      <main className="main-content">
+        <div className="button-container">
+          <Button
+            type="primary"
+            size="large"
+            className="nav-button"
+            onClick={() => navigate('/generate-clothes')}
+          >
+            Generate my clothes
+            <Wand2 className="button-icon" size={20} />
+          </Button>
+          
+          <Button
+            type="primary"  
+            size="large"
+            className="nav-button"
+            onClick={() => navigate('/virtual-room')}
+          >
+            Enter my fitting room
+            <Sparkles className="button-icon" size={20} />
+          </Button>
+        </div>
+      </main>
     </div>
   )
+}
+
+// temporary page components
+function GenerateClothes() {
+  const navigate = useNavigate()
+  return (
+    <div>
+      <h1>Generate Clothes Page</h1>
+      <Button onClick={() => navigate('/')}>Back to Home</Button>
+    </div>
+  )
+}
+
+function VirtualRoom() {
+  const navigate = useNavigate()
+  return (
+    <div>
+      <h1>Virtual Room Page</h1>
+      <Button onClick={() => navigate('/')}>Back to Home</Button>
+    </div>
+  )
+}
+
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/generate-clothes" element={<GenerateClothes />} />
+        <Route path='/virtual-room' element={<VirtualRoom />} />
+      </Routes>
+    </Router>
+  )
+  
 }
 
 export default App
