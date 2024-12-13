@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-// Mock MyPhotos
-const photoGrid = [
-    { id: '1', src: '../assets/myClothes/cloth1.jpg' },
-    { id: '2', src: '../assets/myClothes/cloth2.jpg' },
-    { id: '3', src: '../assets/myClothes/cloth3.jpg' },
-    { id: '4', src: '../assets/myClothes/cloth4.jpg' },
-    { id: '5', src: '../assets/myClothes/cloth5.jpg' },
-];
+import myLogo from '../assets/myFitRoomLogo_250.png'
 
 // Mock MyClothes
 const clothGrid = [
-    { id: '1', src: '../assets/myPhotos/model1.jpg' },
-    { id: '2', src: '../assets/myPhotos/model2.jpg' },
-    { id: '3', src: '../assets/myPhotos/model3.jpg' },
-    { id: '4', src: '../assets/myPhotos/model4.jpg' },
-    { id: '5', src: '../assets/myPhotos/model5.jpg' },
+    { id: '1', src: '/images/myClothes/cloth1.jpg' },
+    { id: '2', src: '/images/myClothes/cloth2.jpg' },
+    { id: '3', src: '/images/myClothes/cloth3.jpg' },
+    { id: '4', src: '/images/myClothes/cloth4.jpg' },
+    { id: '5', src: '/images/myClothes/cloth5.jpg' },
+];
+
+// Mock MyPhotos
+const photoGrid = [
+    { id: '1', src: '/images/myPhotos/model1.jpg' },
+    { id: '2', src: '/images/myPhotos/model2.jpg' },
+    { id: '3', src: '/images/myPhotos/model3.jpg' },
+    { id: '4', src: '/images/myPhotos/model4.jpg' },
+    { id: '5', src: '/images/myPhotos/model5.jpg' },
 ];
 
 function VirtualRoom() {
@@ -38,7 +39,7 @@ function VirtualRoom() {
 
     function handleTryOn() {
         if (photoSelected && clothSelected) {
-          setTryOnResult(`../assets/myPhotos/tryon${clothSelected.id}.png`);
+          setTryOnResult(`/images/myTryOn/tryon${clothSelected.id}.png`);
         }
     };
 
@@ -58,7 +59,7 @@ function VirtualRoom() {
                     onClick={() => navigate('/')}
                   >
                     <img 
-                      src="../assets/myFitRoomLogo_250.jpg" 
+                      src={myLogo}
                       width="30" 
                       height="30" 
                       className="d-inline-block align-top" 
@@ -72,9 +73,9 @@ function VirtualRoom() {
             {/* Main Content */}
             <div className="container mt-4">
                 <div className='row'>
-                    {/* Choose your body */}
+                    {/* Choose your photo */}
                     <div className="col-md-4">
-                        <h3>Choose your photo</h3>
+                        <h4>Choose your photo</h4>
                         <div className="card mb-3">
                             <div className="card-body">
                                 {/* Frame A */}
