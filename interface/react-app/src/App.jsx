@@ -8,7 +8,7 @@ import myLogo from './assets/myFitRoomLogo_250.png'
 
 // other pages
 // import GenerateClothes from './pages/GenerateClothes'
-// import VirtualRoom from './pages/VirtualRoom'
+import VirtualRoom from './pages/VirtualRoom'
 
 function Home() {
   const navigate = useNavigate()
@@ -60,15 +60,15 @@ function GenerateClothes() {
   )
 }
 
-function VirtualRoom() {
-  const navigate = useNavigate()
-  return (
-    <div>
-      <h1>Virtual Room Page</h1>
-      <Button onClick={() => navigate('/')}>Back to Home</Button>
-    </div>
-  )
-}
+// function VirtualRoom() {
+//   const navigate = useNavigate()
+//   return (
+//     <div>
+//       <h1>Virtual Room Page</h1>
+//       <Button onClick={() => navigate('/')}>Back to Home</Button>
+//     </div>
+//   )
+// }
 
 
 function App() {
