@@ -8,8 +8,12 @@
 }
 
 .rectangle-box{
-    width: 400px;
-    height: 600px;
+    width: 388px;
+    height: 388px;
     background-color: rgba(255, 182, 193, 0.653);
     border: 2px solid black;
+}
+
+.navigation-bar{
+    
 }

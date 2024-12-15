@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Sparkles, Wand2 } from 'lucide-react';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import './GenerateClothes.css'
+import myLogo from '../assets/myFitRoomLogo_250.png'
 
 function GenerateClothes() {
     const navigate = useNavigate()
@@ -23,18 +24,35 @@ function GenerateClothes() {
         handleOutfitGeneration()
     }
     const handleOutfitGeneration = () => {
-        if(generatePrompt == 'a white T-shirt with Star War theme with a white background.'){
+        if(generatePrompt == 'a white T-shirt with Star War theme with a white background'){
             setGenerateOutfit('/images/myClothes/cloth1.jpg')
         } 
         if(generatePrompt == 'a red polka dot dress with a white background'){
-            setGenerateOutfit('/images/myClothes/cloth1.jpg')
+            setGenerateOutfit('/images/myClothes/cloth2.jpg')
         } 
     }
     
     
     return (
       <div>
-        <h1>Generate Clothes Page</h1>
+        {/* Navigation Bar */}
+        <nav className="navbar navbar-light bg-light">
+                <div className="container">
+                  <button 
+                    className="navbar-brand btn btn-link p-0" 
+                    onClick={() => navigate('/')}
+                  >
+                    <img 
+                      src={myLogo}
+                      width="30" 
+                      height="30" 
+                      className="d-inline-block align-top" 
+                      alt="MyFitRoom"
+                    />
+                    MyFitRoom
+                  </button>
+                </div>
+            </nav>
         <div className = "container">
             <div className='column'>
                 <div>
@@ -60,8 +78,8 @@ function GenerateClothes() {
             <div className = "column">
                 <h5>Your generated clothes:</h5>
                 <div className="rectangle-box">
-                    <img src={generateOutfit}
-                    alt="MyFitRoom"/>
+                    {generateOutfit && (<img src={generateOutfit}
+                    alt="MyFitRoom"/>)}
                 </div>
                 <Button onClick={() => navigate('/')}>Back to Home</Button>
             </div>
