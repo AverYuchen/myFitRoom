@@ -19,6 +19,7 @@ function Home() {
           <img src={myLogo} alt="MyFitRoom Logo" className="header-logo" />
           <span className="title">MyFitRoom</span>
         </div>
+        
       </header>
       
       <main className="main-content">
