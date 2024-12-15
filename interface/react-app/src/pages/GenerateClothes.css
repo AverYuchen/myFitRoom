@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+}
+
+.column{
+    flex: 1;
+    padding: 10px;
+}
+
+.rectangle-box{
+    width: 400px;
+    height: 600px;
+    background-color: rgba(255, 182, 193, 0.653);
+    border: 2px solid black;
+}
