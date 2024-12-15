@@ -106,7 +106,7 @@ html, body {
   align-items: center;
 }
 
-.nav-button {
+.nav-button_1 {
   width: 280px;
   height: 48px;
   border-radius: 30px;
@@ -122,31 +122,31 @@ html, body {
   padding: 0 20px !important;
 }
 
-.nav-button:first-child {
+.nav-button_1:first-child {
   background-color: #000 !important;
   color: white !important;
 }
 
-.nav-button:first-child:hover {
+.nav-button_1:first-child:hover {
   opacity: 0.9;
 }
 
-.nav-button:last-child {
+.nav-button_1:last-child {
   background-color: #FFC0CB !important;
   color: #000 !important;
 }
 
-.nav-button:hover {
+.nav-button_1:hover {
   transform: scale(1.03);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.nav-button:active {
+.nav-button_1:active {
   transform: translateY(1px); /* å¢žåŠ æŒ‰åŽ‹æ•ˆæžœ */
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
-.nav-button:last-child:hover {
+.nav-button_1:last-child:hover {
   opacity: 0.9;
 }
 
@@ -154,10 +154,10 @@ html, body {
   margin-left: 4px;
 }
 
-.nav-button:first-child .button-icon {
+.nav-button_1:first-child .button-icon {
   color: white !important;
 }
 
-.nav-button:last-child .button-icon {
+.nav-button_1:last-child .button-icon {
   color: black !important;
 }

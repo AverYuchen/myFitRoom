@@ -27,7 +27,7 @@ function Home() {
           <Button
             type="primary"
             size="large"
-            className="nav-button"
+            className="nav-button_1"
             onClick={() => navigate('/generate-clothes')}
           >
             Generate my clothes
@@ -37,7 +37,7 @@ function Home() {
           <Button
             type="primary"  
             size="large"
-            className="nav-button"
+            className="nav-button_1"
             onClick={() => navigate('/virtual-room')}
           >
             Enter my fitting room
