@@ -303,7 +303,7 @@ Final two buttons
     font-weight: bold;
     transition: all 0.3s ease;
     padding: 12px 20px;
-    font-family: 'Baloo 2', cursive;    
+    font-family: 'Playfair Display', serif, sans-serif;   
 }
 
 .nav-button.first-button {
