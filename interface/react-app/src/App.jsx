@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-route
 import myLogo from './assets/myFitRoomLogo_250.png'
 
 // other pages
-// import GenerateClothes from './pages/GenerateClothes'
+import GenerateClothes from './pages/GenerateClothes'
 import VirtualRoom from './pages/VirtualRoom'
 
 function Home() {
@@ -50,6 +50,7 @@ function Home() {
 }
 
 // temporary page components
+/*
 function GenerateClothes() {
   const navigate = useNavigate()
   return (
@@ -59,6 +60,7 @@ function GenerateClothes() {
     </div>
   )
 }
+*/
 
 // function VirtualRoom() {
 //   const navigate = useNavigate()
