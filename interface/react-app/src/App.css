@@ -142,7 +142,7 @@ html, body {
 }
 
 .nav-button_1:active {
-  transform: translateY(1px); /* å¢žåŠ æŒ‰åŽ‹æ•ˆæžœ */
+  transform: translateY(1px); 
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 

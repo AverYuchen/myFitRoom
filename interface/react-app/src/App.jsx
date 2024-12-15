@@ -15,12 +15,16 @@ function Home() {
   return (
     <div className="app">
       <header className="header">
-        <div className="logo-section">
-          <img src={myLogo} alt="MyFitRoom Logo" className="header-logo" />
-          <span className="title">MyFitRoom</span>
-        </div>
-        
-      </header>
+                   <div className="logo-section">
+                     <button 
+                         className="navbar-brand btn btn-link p-0" 
+                         onClick={() => navigate('/')}
+                       >
+                     <img src={myLogo} alt="MyFitRoom" className="header-logo" />
+                     </button>
+                     <span className="title">MyFitRoom</span>
+                   </div>
+                 </header>
       
       <main className="main-content">
         <div className="button-container">

@@ -69,81 +69,97 @@ function GenerateClothes() {
     return (
       <div>
         {/* Navigation Bar */}
-        <nav className="navbar navbar-light bg-light">
-                <div className="container">
-                  <button 
+        <header className="header">
+              <div className="logo-section">
+                <button 
                     className="navbar-brand btn btn-link p-0" 
                     onClick={() => navigate('/')}
                   >
-                    <img 
-                      src={myLogo}
-                      width="30" 
-                      height="30" 
-                      className="d-inline-block align-top" 
-                      alt="MyFitRoom"
-                    />
-                    MyFitRoom
-                  </button>
-                </div>
-            </nav>
+                <img src={myLogo} alt="MyFitRoom" className="header-logo" />
+                </button>
+                <span className="title">MyFitRoom</span>
+              </div>
+            </header>
+
+        {/* Main Content */}
+        <div style={{ marginTop: '20px' }}></div>
+        <div className="main-content">
         <div className = "container">
-            <div className='column'>
+        <div className='column'>
                 <div>
-                    <h5>
+                    <h5 className="m-0 gradient-text fw-semibold">
                         What kind of clothes do you want?
                     </h5>
+                <div style={{ marginTop: '30px' }}></div>
                     <textarea 
                             className = "inputbox"
                             type = "text"
                             value = {inputText}
                             onChange = {handleInput}
-                            placeholder = "a white shirt with hello kitty"
+                            placeholder = "A white shirt with hello kitty..."
+                            style={{ width: '80%', height: '200px' }}
                             />
                     <div>
-                        <Button className = "Button" onClick = {handleGenerateButton}>Generate</Button>
+                    <div style={{ marginTop: '20px' }}></div>
+                        <button className = "Button" onClick = {handleGenerateButton}>Generate</button>
                     </div>
                 </div>
                 <div>
-                    <h5>
+                <div style={{ marginTop: '35px' }}></div>
+                    <h5 className="m-0 gradient-text fw-semibold">
                         Suggested Prompts
                     </h5>
+                    <div style={{ marginTop: '30px' }}></div>
                     <div>
-                        <Button className = "suggestedPrompts" onClick={() => handleSuggestedGeneration("a white T-shirt with Star War theme with a white background")}>a white T-shirt with Star War theme with a white background</Button>
+                        <button className = "suggestedPrompts" onClick={() => handleSuggestedGeneration("a white T-shirt with Star War theme with a white background")}>a white T-shirt with Star War theme with a white background</button>
                     </div>
+                    <div style={{ marginTop: '30px' }}></div>
                     <div>
-                        <Button className = "suggestedPrompts" onClick={() => handleSuggestedGeneration("a black pants")}>a black pants</Button>
+                        <button className = "suggestedPrompts" onClick={() => handleSuggestedGeneration("a black pants")}>a black pants</button>
                     </div>
+                    <div style={{ marginTop: '30px' }}></div>
                     <div>
-                        <Button className = "suggestedPrompts" onClick={() => handleSuggestedGeneration("a yellow top")}>a yellow top</Button>
+                        <button className = "suggestedPrompts" onClick={() => handleSuggestedGeneration("a yellow top")}>a yellow top</button>
                     </div>
                 </div>
             </div>
             <div className = "column">
-                <h5>Your generated clothes:</h5>
-                <div className="rectangle-box">
-                    {generateOutfit && (<img src={generateOutfit}
-                    alt="MyFitRoom"/>)}
+                <h5 className="m-0 gradient-text fw-semibold">Your generated clothes:</h5>
+                <div style={{ marginTop: '25px' }}></div>
+                <div className="rectangle-box"
+                style={{ width: '65%', height: '65%' }}>
+                    {
+                    generateOutfit && (
+                    <img src={generateOutfit} 
+                    style={{ width: '100%', height: '100%' }}
+                    alt="MyFitRoom"/ >)}
                 </div>
-                {generateOutfit && (<button className="Button" onClick={handleDownload}>Download the clothes</button>)}
-                {generateOutfit && !saveToCloset &&(<Button className="Button" onClick={handleSaveToCloset}>Save to My Closet</Button>)}
+                <div style={{ marginTop: '25px' }}>
+                {generateOutfit && (<button className="Button" style={{ marginLeft: '140px' }}
+                onClick={handleDownload}>Download</button>)}
+                {generateOutfit && !saveToCloset &&(<button className="Button" style={{ marginLeft: '140px' }}
+                onClick={handleSaveToCloset}>Save to My Closet</button>)}
                 {isPopupVisible && (
-                    <div className="popupOverlayStyle">
+                    <div className="popupOverlayStyle" style={{ marginLeft: '140px' }}>
                     <div className="popupContentStyle">
                         <h2>Clothes Saved!</h2>
-                        <p>Your outfit has been successfully saved to your virtual closet.</p>
                         <button
                         onClick={closePopup}
                         className='popup-button'
+                        style={{ marginLeft: '130px' }}
                         >
                         Close
                         </button>
                     </div>
                 </div>)}
-                {saveToCloset &&(<Button className="Button" onClick={() => navigate('/virtual-room')}>Try it on!</Button>)}
-                {generateOutfit && (<Button className="Button" onClick={reset}>Discard</Button>)}
+                {saveToCloset &&(<button className="Button" style={{ marginLeft: '140px' }} onClick={() => navigate('/virtual-room')}>Try it on!</button>)}
+                {generateOutfit && (<button className="Button" style={{ marginLeft: '140px' }}
+                onClick={reset}>Clear    </button>)}
+                </div>
             </div>
         </div>
       </div>
+        </div>
     )
   }
 
