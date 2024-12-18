@@ -56,7 +56,7 @@ function GenerateClothes() {
             setGenerateOutfit('/images/myClothes/cloth5.jpg')
         } else 
         if (generatePrompt == 'yellow sweater featuring with Minion'){
-            setGenerateOutfit('')
+            setGenerateOutfit('/images/myClothes/cloth7.jpg')
         }
         else {
             setGenerateOutfit('')
