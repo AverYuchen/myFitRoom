@@ -180,12 +180,42 @@ function VirtualRoom() {
               setClothGrid(updatedClothGrid);
               setClothNextId(clothNextId + 1);
           }
-
-          // Clear temporary states
-          setSelectedPhoto(null);
-          setSelectedCloth(null);
-          setTryOnResult(null);
         }
+    }
+
+    async function handleDownload() {
+      try {
+          // 确保有tryOnResult
+          if (!tryOnResult) {
+              console.error('No image to download');
+              return;
+          }
+  
+          // 获取图片数据
+          const response = await fetch(tryOnResult);
+          const blob = await response.blob();
+          
+          // 创建下载链接
+          const url = window.URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = url;
+          link.download = 'myTryOn.jpg';
+          document.body.appendChild(link);
+          link.click();
+          
+          // 清理
+          document.body.removeChild(link);
+          window.URL.revokeObjectURL(url);
+      } catch (error) {
+          console.error('Download failed:', error);
+      }
+  }
+
+    function handleClear() {
+        // Clear temporary states
+        setSelectedPhoto(null);
+        setSelectedCloth(null);
+        setTryOnResult(null);
     }
 
     return (
@@ -435,7 +465,7 @@ function VirtualRoom() {
                                       Upper
                                     </button>
                                     <button
-                                      className={`btn pink-btn`} // 添加自定义类名
+                                      className={`btn pink-btn`} 
                                       style={{
                                         ...customStyles.baseButton,
                                         ...(tryOnType === 'lower' 
@@ -496,11 +526,31 @@ function VirtualRoom() {
                                 {/* Save button */} 
                                 <button 
                                   // className="btn btn-success w-100"
-                                  className="btn btn-success nav-button last-button w-100"
+                                  className="btn btn-success nav-button last-button w-100 mb-2"
                                   onClick={handleSave}
                                   disabled={!tryOnResult}
                                 >
                                   Save
+                                </button>
+
+                                {/* Download button */}
+                                <button 
+                                  // className="btn btn-success w-100"
+                                  className="btn btn-success nav-button last-button w-100 mb-2"
+                                  onClick={handleDownload}
+                                  disabled={!tryOnResult}
+                                >
+                                  Download
+                                </button>
+
+                                {/* Clear button */}
+                                <button 
+                                  // className="btn btn-success w-100"
+                                  className="btn btn-success nav-button last-button w-100"
+                                  onClick={handleClear}
+                                  disabled={!tryOnResult}
+                                >
+                                  Clear
                                 </button>
                             </div>
                         </div>
