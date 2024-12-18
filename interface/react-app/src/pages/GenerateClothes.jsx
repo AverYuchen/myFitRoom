@@ -23,6 +23,8 @@ function GenerateClothes() {
     }, [generatePrompt, pendingGeneration]);
 
     const handleInput= (event) => {
+        setGenerateOutfit('')
+        setSaveToCloset(false)
         setInputText(event.target.value);
     };
     const handleGenerateButton = () => {
@@ -30,16 +32,35 @@ function GenerateClothes() {
         setPendingGeneration(true);
     }
     const handleSuggestedGeneration = (value) => {
+        setSaveToCloset(false)
         setGeneratePrompt(value);
         setPendingGeneration(true);
     }
     const handleOutfitGeneration = () => {
         if(generatePrompt == 'a white T-shirt with Star War theme with a white background'){
             setGenerateOutfit('/images/myClothes/cloth1.jpg')
-        } 
+        } else
         if(generatePrompt == 'a red polka dot dress with a white background'){
             setGenerateOutfit('/images/myClothes/cloth2.jpg')
-        } 
+        } else
+        if(generatePrompt == 'a white hoodie with pink ice-cream patterns, on a pure background'){
+            setGenerateOutfit('/images/discardClothes/icecreamHoodie.jpg')
+        } else
+        if(generatePrompt == 'black blouse with mickey mouse, it is on white background, no model'){
+            setGenerateOutfit('/images/discardClothes/mickey_blouse.jpg')
+        } else
+        if(generatePrompt == 'a pair of white sweat pants that has black cats print'){
+            setGenerateOutfit('/images/myClothes/cloth6.jpg')
+        } else 
+        if(generatePrompt == 'jeans featuring with tiger pattern'){
+            setGenerateOutfit('/images/myClothes/cloth5.jpg')
+        } else 
+        if (generatePrompt == 'yellow sweater featuring with Minion'){
+            setGenerateOutfit('')
+        }
+        else {
+            setGenerateOutfit('')
+        }
     }
     const handleSaveToCloset = () => {
         console.log("You saved your clothes to you closet")
@@ -115,11 +136,15 @@ function GenerateClothes() {
                     </div>
                     <div style={{ marginTop: '30px' }}></div>
                     <div>
-                        <button className = "suggestedPrompts" onClick={() => handleSuggestedGeneration("a black pants")}>a black pants</button>
+                        <button className = "suggestedPrompts" onClick={() => handleSuggestedGeneration("black blouse with mickey mouse, it is on white background, no model")}>black blouse with mickey mouse, it is on white background, no model</button>
                     </div>
                     <div style={{ marginTop: '30px' }}></div>
                     <div>
-                        <button className = "suggestedPrompts" onClick={() => handleSuggestedGeneration("a yellow top")}>a yellow top</button>
+                        <button className = "suggestedPrompts" onClick={() => handleSuggestedGeneration("a red polka dot dress with a white background")}>a red polka dot dress with a white background</button>
+                    </div>
+                    <div style={{ marginTop: '30px' }}></div>
+                    <div>
+                        <button className = "suggestedPrompts" onClick={() => handleSuggestedGeneration("a white hoodie with pink ice-cream patterns, on a pure background")}>a white hoodie with pink ice-cream patterns, on a pure background</button>
                     </div>
                 </div>
             </div>
@@ -132,7 +157,7 @@ function GenerateClothes() {
                     generateOutfit && (
                     <img src={generateOutfit} 
                     style={{ width: '100%', height: '100%' }}
-                    alt="MyFitRoom"/ >)}
+                    alt="MyFitRoom"/>)}
                 </div>
                 <div style={{ marginTop: '25px' }}>
                 {generateOutfit && (<button className="Button" style={{ marginLeft: '140px' }}
