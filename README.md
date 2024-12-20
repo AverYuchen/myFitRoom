@@ -54,11 +54,10 @@ Currently, we use a submodule to point the OOTDiffusion folder to its original d
 
 ## Data input and output
 We require prompts specifically for the clothes generation model, as well as both model and garment images for the virtual try-on process.
+
 File Structure and Output
 
-- Real-Life Model Images: Our real-life model images are stored in OOTDiffusion/run/examples/model.
-
-- Example Garments and Models: Example garments and model images for virtual try-on are available in OOTDiffusion/run/examples.
+- Example Garments and Models: Example garments and model images for virtual try-on are available in OOTDiffusion/run/examples. We also uploaded our own images as models to test the model.
 
 - Generated Clothes Output:
     - The generated output is saved in the folder notebooks/generated_clothes.
