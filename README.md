@@ -61,16 +61,15 @@ File Structure and Output
 - Example Garments and Models: Example garments and model images for virtual try-on are available in OOTDiffusion/run/examples.
 
 - Generated Clothes Output:
+    - The generated output is saved in the folder notebooks/generated_clothes.
 
-- - The generated output is saved in the folder notebooks/generated_clothes.
-
-- - In our original notebook and Google Drive, the generated clothes images are saved to OOTDiffusion/run/saved_images.
+    - In our original notebook and Google Drive, the generated clothes images are saved to OOTDiffusion/run/saved_images.
 
 - Virtual Try-On Output:
 
-- - Virtual try-on results are saved in the folder notebooks/images_output.
+    - Virtual try-on results are saved in the folder notebooks/images_output.
 
-- - In our original notebook and Google Drive, the virtual try-on images are saved to OOTDiffusion/run/images_output.
+    - In our original notebook and Google Drive, the virtual try-on images are saved to OOTDiffusion/run/images_output.
 
 
 ## Model Usage Disclaimer
