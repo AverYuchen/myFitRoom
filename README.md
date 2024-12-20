@@ -6,6 +6,7 @@ This is the COSC 6480 Experiment AI final project for group: Avery Bai, Jiayi Yo
 
 ## Running the application
 Git clone this repository and open it to your IDE
+
 Run
 ```bash
 cd interface/react-app
@@ -25,11 +26,52 @@ npm run dev
 We run this application on port 5173. Click this http://localhost:5173/ to view.
 
 ## Running the model
-We run these models on GoogleColab. All of the GoogleColab notebooks are saved in notebooks. To run these notebooks properly, make sure you download notebooks and OOTDiffusion folder to the google drive folder. Make sure youchange the file path in the notebooks, and change the runtime to A100 GPU. A100 GPU are $10 per 100 computing units. 
+We run these models on Google Colab. All of the Google Colab notebooks are saved in the notebooks directory. To run these notebooks properly, follow these steps:
+
+-  Download Required Files:
+
+Download the notebooks folder and the OOTDiffusion folder.
+
+Upload these to your Google Drive.
+
+- Adjust File Paths:
+
+Ensure you update the file paths in the notebooks to match your Google Drive directory structure.
+
+- Set Runtime to A100 GPU:
+
+Change the runtime type in Google Colab to A100 GPU for optimal performance.
+
+Note: A100 GPUs cost approximately $10 per 100 computing units.
+
+- File Paths in Notebooks:
+
+You may notice different import and export file paths in our notebooks because we uploaded OOTDiffusion to our own Drive, so there will be slight different between the current OOTDiffusion folder and the version on our google drive. If you want to run our scripts directly without change any path, please save the folder using link https://drive.google.com/drive/folders/1J1aU0RBc-zH-KjIQ7nBmkEfzWWfVDQhb to your google drive. 
+
+Currently, we use a submodule to point the OOTDiffusion folder to its original directory.
+
+
 
 ## Data input and output
-The input images have two different types: model and outfits.
-The model input data(images) are saved under folder notebooks/OOTDiffusion/run/model and the garment input data(images) are saved under folder notebooks/OOTDiffusion/run/garment. 
+We require prompts specifically for the clothes generation model, as well as both model and garment images for the virtual try-on process.
+File Structure and Output
+
+- Real-Life Model Images: Our real-life model images are stored in OOTDiffusion/run/examples/model.
+
+- Example Garments and Models: Example garments and model images for virtual try-on are available in OOTDiffusion/run/examples.
+
+- Generated Clothes Output:
+
+- - The generated output is saved in the folder notebooks/generated_clothes.
+
+- - In our original notebook and Google Drive, the generated clothes images are saved to OOTDiffusion/run/saved_images.
+
+- Virtual Try-On Output:
+
+- - Virtual try-on results are saved in the folder notebooks/images_output.
+
+- - In our original notebook and Google Drive, the virtual try-on images are saved to OOTDiffusion/run/images_output.
+
 
 ## Model Usage Disclaimer
 1. OOTDiffusion
