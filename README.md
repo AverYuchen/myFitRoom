@@ -89,6 +89,7 @@ All models, tools, and frameworks used in this repository are for educational pu
 We do not use these models for any commercial activities.
 We fully acknowledge the ownership and intellectual property rights of the respective model authors.
 For further information on these models, please refer to their respective links:
+
 [OOTDiffusion](https://huggingface.co/levihsu/OOTDiffusiongi)
 
 [LoRA-Text2Image-FineTUning-NouRed/sd-fashion-products](https://huggingface.co/NouRed/sd-fashion-products)
