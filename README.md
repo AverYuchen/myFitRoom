@@ -36,25 +36,25 @@ We run these models on Google Colab. All of the Google Colab notebooks are saved
 
 -  Download Required Files:
 
-Download the notebooks folder and the OOTDiffusion folder.
+    - Download the notebooks folder and the OOTDiffusion folder.
 
-Upload these to your Google Drive.
+    - Upload these to your Google Drive.
 
 - Adjust File Paths:
 
-Ensure you update the file paths in the notebooks to match your Google Drive directory structure.
+    - Ensure you update the file paths in the notebooks to match your Google Drive directory structure.
 
 - Set Runtime to A100 GPU:
 
-Change the runtime type in Google Colab to A100 GPU for optimal performance.
+    - Change the runtime type in Google Colab to A100 GPU for optimal performance.
 
-Note: A100 GPUs cost approximately $10 per 100 computing units.
+    - Note: A100 GPUs cost approximately $10 per 100 computing units.
 
 - File Paths in Notebooks:
 
-You may notice different import and export file paths in our notebooks because we uploaded OOTDiffusion to our own Drive, so there will be slight different between the current OOTDiffusion folder and the version on our google drive. If you want to run our scripts directly without change any path, please save the folder using link https://drive.google.com/drive/folders/1J1aU0RBc-zH-KjIQ7nBmkEfzWWfVDQhb to your google drive. 
+    - You may notice different import and export file paths in our notebooks because we uploaded OOTDiffusion to our own Drive, so there will be slight different between the current OOTDiffusion folder and the version on our google drive. If you want to run our scripts directly without change any path, please save the folder using link https://drive.google.com/drive/folders/1J1aU0RBc-zH-KjIQ7nBmkEfzWWfVDQhb to your google drive. 
 
-Currently, we use a submodule to point the OOTDiffusion folder to its original directory.
+    - Currently, we use a submodule to point the OOTDiffusion folder to its original directory.
 
 
 
@@ -91,6 +91,7 @@ We fully acknowledge the ownership and intellectual property rights of the respe
 For further information on these models, please refer to their respective links:
 
 [OOTDiffusion](https://huggingface.co/levihsu/OOTDiffusiongi)
+
 [LoRA-Text2Image-FineTUning-NouRed/sd-fashion-products](https://huggingface.co/NouRed/sd-fashion-products)
 If there are any concerns or queries, feel free to contact us.
 
