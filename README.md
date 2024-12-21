@@ -4,7 +4,7 @@
 ## Purpose of This Repository
 This is the COSC 6480 Experiment AI final project for group: Avery Bai, Jiayi You, Xinyi Huang. This repository is created and maintained solely for learning purposes. It is intended to demonstrate the use of various tools, frameworks, and models for educational exploration and non-commercial activities.
 
-## Preview
+## Interface Preview
 ![screenshot](interface/react-app/src/assets/mainPage.png)
 ![screenshot](interface/react-app/src/assets/generateClothes.png)
 ![screenshot](interface/react-app/src/assets/virtualFitting.png)
