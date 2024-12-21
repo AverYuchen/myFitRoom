@@ -7,7 +7,7 @@ This is the COSC 6480 Experiment AI final project for group: Avery Bai, Jiayi Yo
 ## Preview
 ![screenshot](interface/react-app/src/assets/mainPage.png)
 ![screenshot](interface/react-app/src/assets/clothesGenerator.png)
-![screenshot](interface/react-app/src/assets/virtualFittingRoom.png)
+![screenshot](interface/react-app/src/assets/virtualFitting.png)
 
 
 ## Running the application
@@ -90,8 +90,8 @@ We do not use these models for any commercial activities.
 We fully acknowledge the ownership and intellectual property rights of the respective model authors.
 For further information on these models, please refer to their respective links:
 
-[OOTDiffusion] (https://huggingface.co/levihsu/OOTDiffusiongi)
-[LoRA-Text2Image-FineTUning-NouRed/sd-fashion-products] (https://huggingface.co/NouRed/sd-fashion-products)
+[OOTDiffusion](https://huggingface.co/levihsu/OOTDiffusiongi)
+[LoRA-Text2Image-FineTUning-NouRed/sd-fashion-products](https://huggingface.co/NouRed/sd-fashion-products)
 If there are any concerns or queries, feel free to contact us.
 
 ## Citations
