@@ -6,7 +6,7 @@ This is the COSC 6480 Experiment AI final project for group: Avery Bai, Jiayi Yo
 
 ## Preview
 ![screenshot](interface/react-app/src/assets/mainPage.png)
-![screenshot](interface/react-app/src/assets/clothesGenerator.png)
+![screenshot](interface/react-app/src/assets/generateClothes.png)
 ![screenshot](interface/react-app/src/assets/virtualFitting.png)
 
 
